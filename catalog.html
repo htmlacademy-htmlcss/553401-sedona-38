@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header" data-test="header">
         <a class="logo" href="index.html">
           <img src="#" width="140" height="70" alt="Логотип">
         </a>
@@ -39,8 +39,8 @@
         </nav>
       </header>
 
-      <main class="main main-catalog">
-        <section class="filter">
+      <main class="main main-catalog" data-test="main">
+        <section class="filter" data-test="filter">
           <header class="filter-header">
             <h1 class="filter-title">Гостиницы Седоны</h1>
             <ol class="breadcrumbs-list">
@@ -122,7 +122,7 @@
           </form>
         </section>
 
-        <section class="results">
+        <section class="results" data-test="catalog">
           <header>
             <h2 class="results-title page-title">Найдено гостиниц: <span>38</span></h2>
             <select class="sorting-control" name="sorting" aria-label="Сортировка">
@@ -242,7 +242,7 @@
           </footer>
         </section>
 
-        <section class="subscribe">
+        <section class="subscribe" data-test="subscribe">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -253,7 +253,7 @@
         </section>
       </main>
 
-      <footer class="main main-footer">
+      <footer class="main main-footer" data-test="footer">
         <ul class="footer-social social">
           <li class="social-item">
             <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
