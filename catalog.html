@@ -48,6 +48,7 @@
               <li>
                 <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
                   <span class="visually-hidden">Главная</span>
+                  <img src="img/svg/home.svg" width="12" height="12" alt="Возврат на главную страницу">
                 </a>
               </li>
               <li>
@@ -56,7 +57,7 @@
             </ol>
           </header>
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filter-fieldset infrastructure">
+            <fieldset class="filter-fieldset infrastructure-fieldset">
               <legend>Инфраструктура:</legend>
               <ul class="infrastructure-list control-list">
                 <li class="control-item">
@@ -73,8 +74,8 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-fieldset choise-of-housing">
-              <legend>Тип жилья:</legend>
+            <fieldset class="filter-fieldset choise-of-housing-fieldset">
+              <legend>Тип Жилья:</legend>   <!--слово "Жилья" по макету с Большой буквы-->
               <ul class="choise-of-housing-list control-list">
                 <li class="control-item">
                   <input class="control-input" type="radio" id="hotel" name="type-of-housing" value="hotel" checked>
@@ -90,7 +91,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-fieldset price">
+            <fieldset class="filter-fieldset price-fieldset">
               <legend>Стоимость, ₽:</legend>
               <div class="range">
                 <div class="range-input-container">
@@ -116,15 +117,15 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset class="filter-fieldset buttons">
+            <fieldset class="filter-fieldset buttons-fieldset">
               <button class="filter-submit-btn button-light button" type="submit">Применить</button>
               <button class="filter-reset-btn button-transparent button" type="reset">Сбросить</button>
             </fieldset>
           </form>
         </section>
 
-        <section class="results" data-test="catalog">
-          <header>
+        <section class="results container" data-test="catalog">
+          <header class="results-sorting">
             <h2 class="results-title page-title">Найдено гостиниц: <span>38</span></h2>
             <select class="sorting-control" name="sorting" aria-label="Сортировка">
               <option value="cheap" selected>Сначала дешевые</option>
@@ -132,7 +133,7 @@
               <option value="popular">Сначала популярные</option>
             </select>
 
-            <ul class="sorting-view view">
+            <ul class="sorting-view-list view">
               <li class="view-item">
                 <a class="view-link view-link-active view-link-tile" href="#">
                   <span class="visually-hidden">Вид плитками</span>
@@ -179,7 +180,7 @@
                 <p class="product-text product-type">Гостиница</p>
                 <p class="product-text product-price">От <span>5000 ₽</span></p>
                 <a class="product-more-button button button-dark" href="#">Подробнее</a>
-                <button class="product-favorites-btn button">В избранном</button>
+                <button class="product-favorites-btn button button-selected">В избранном</button>
                 <p class="product-stars product-stars-4">
                   <span class="visually-hidden">Четырехзвездочный отель</span>
                 </p>
@@ -219,8 +220,8 @@
               </li>
             </ul>
           </section>
-          <footer>
-            <ul class="pagination">
+          <footer class="pagination">
+            <ul class="pagination-list">
               <li>
                 <a class="pagination-link pagination-link-current" href="#" aria-current="page">1</a>
               </li>
