@@ -78,6 +78,14 @@
   text-align: center;
 }
 
+.page-input {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -408,10 +416,7 @@ body {
 
 .subscribe-input {
   width: 100%;
-  padding: 12px 20px;
-  border: none;
   border-radius: 4px 0 0 4px;
-  background-color: #f2f2f2;
 }
 
 .subscribe-btn {
@@ -537,6 +542,58 @@ body {
 
 .price-fieldset {
   margin-left: auto;
+}
+
+.range-input-container {
+  display: flex;
+  column-gap: 2px;
+  margin-bottom: 36px;
+}
+
+.range-item {
+  position: relative;
+}
+
+.range-item label {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.range-toggle-btn {
+  position: absolute;
+  top: -8px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle-btn-min {
+  left: 0;
+}
+
+.range-toggle-btn-max {
+  right: 0;
 }
 
 .buttons-fieldset {
