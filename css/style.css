@@ -493,10 +493,9 @@ body {
 }
 
 .breadcrumbs-list li {
-  display: grid;
+  display: flex;
   align-items: baseline;
-  grid-template-columns: auto 6px;
-  gap: 11px;
+  column-gap: 11px;
   margin-right: 11px;
 }
 
@@ -616,10 +615,12 @@ body {
 }
 
 .range-input-min {
+  width: 143px;
   border-radius: 4px 0 0 4px;
 }
 
 .range-input-max {
+  width: 143px;
   border-radius: 0 4px 4px 0;
 }
 
