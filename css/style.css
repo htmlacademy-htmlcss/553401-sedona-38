@@ -486,6 +486,8 @@ body {
 .breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
+  gap: 11px;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -496,7 +498,6 @@ body {
   display: flex;
   align-items: baseline;
   column-gap: 11px;
-  margin-right: 11px;
 }
 
 .breadcrumbs-list li::after {
@@ -517,6 +518,13 @@ body {
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
+}
+
+.breadcrumbs-link-home {
+  padding: 6px;
+  background-image: url("../img/svg/home.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
 }
 
 .filter-form {
@@ -715,6 +723,21 @@ body {
   height: 48px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+}
+
+.view-link-tile {
+  background-image: url("../img/svg/view-tile.svg");
+}
+
+.view-link-preview {
+  background-image: url("../img/svg/view-preview.svg");
+}
+
+.view-link-table {
+  background-image: url("../img/svg/view-table.svg");
 }
 
 .view-link-active {
@@ -751,6 +774,7 @@ body {
 }
 
 .product-title-link {
+  justify-self: start;
   grid-column: span 2;
   text-decoration: none;
   color: #000000;
