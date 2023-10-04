@@ -294,8 +294,6 @@ body {
 
 .blocks-text {
   margin: 0;
-  font-size: 18px;
-  line-height: 21px;
   text-align: center;
 }
 
@@ -788,11 +786,6 @@ body {
 
 .product p {
   margin: 0;
-}
-
-.product-text {
-  font-size: 18px;
-  line-height: 21px;
 }
 
 .product-price {
