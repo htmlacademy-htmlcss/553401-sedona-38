@@ -85,8 +85,8 @@
 
 .button-transparent:focus {
   opacity: 1;
-  outline-offset: 3px;
-  box-shadow: 0 0 0 3px #83b3d3;
+  outline: none;
+  box-shadow: inset 0 0 0 3px #83b3d3;
   border-radius: 4px;
 }
 
@@ -147,8 +147,7 @@
 }
 
 .page-input:focus {
-  box-shadow: 0 0 0 3px #83b3d3;
-  outline-offset: 4px;
+  outline: 3px solid #83b3d3;
   background-color: #e6e6e6;
 }
 
@@ -514,6 +513,7 @@ body {
 
 /* Исправляет некрасивую рамку при фокусе на поле ввода блока подписки */
 .subscribe-input:focus {
+  outline: none;
   box-shadow: inset 0 0 0 3px #83b3d3;
 }
 
@@ -695,15 +695,15 @@ body {
 .control-input:hover + .control-label,
 .control-input:hover {
   opacity: 0.6;
-  box-shadow: none;
 }
 
 .control-input:focus + .control-label {
   opacity: 1;
 }
 
+/* outline криво отображается при фокусе с клавиатуры, поэтому тут box-shadow */
 .control-input:focus {
-  outline-offset: 4px;
+  outline: none;
   opacity: 1;
   box-shadow: 0 0 0 3px #83b3d3;
 }
@@ -711,7 +711,6 @@ body {
 .control-input:active + .control-label,
 .control-input:active {
   opacity: 0.3;
-  box-shadow: none;
 }
 
 .control-input[type="radio"] {
@@ -808,12 +807,13 @@ body {
 }
 
 .range-toggle-btn:focus {
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25), 0 0 0 3px #83b3d3;
-  outline-offset: 4px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83b3d3;
 }
 
 .range-toggle-btn:active {
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25), 0 0 0 2px #83b3d3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 2px solid #83b3d3;
 }
 
 .range-toggle-btn-min {
@@ -860,7 +860,7 @@ body {
 
 .sorting-control:hover,
 .sorting-control:focus {
-  outline-offset: 3px;
+  outline: none;
   border-color: #68a2ca;
 }
 
@@ -895,7 +895,7 @@ body {
 
 .view-link:focus {
   border-color: #68a2ca;
-  outline-offset: 4px;
+  outline: none;
 }
 
 .view-link:active {
