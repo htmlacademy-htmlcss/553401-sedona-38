@@ -100,6 +100,7 @@ body {
 .wrapper {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -491,8 +492,28 @@ body {
   list-style: none;
 }
 
+.breadcrumbs-list li {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: auto 6px;
+  gap: 11px;
+  margin-right: 11px;
+}
+
+.breadcrumbs-list li::after {
+  content: "";
+  width: 6px;
+  height: 10px;
+  background-image: url("../img/svg/next-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs-list li:last-child::after {
+  content: none;
+}
+
 .breadcrumbs-link {
-  margin-right: 28px;
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
