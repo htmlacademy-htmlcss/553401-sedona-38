@@ -250,7 +250,9 @@ body {
 .user-link {
   position: relative;
   display: block;
-  padding: 32px 22px;
+  padding: 20px 16px;
+  min-width: 44px;
+  min-height: 64px;
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center;
@@ -367,6 +369,7 @@ body {
 }
 
 .blocks-title {
+  color: #000000;
   margin: 0 0 30px;
   font-size: 24px;
   line-height: 28px;
@@ -383,6 +386,10 @@ body {
   position: relative;
   width: 175px;
   padding-bottom: 30px;
+}
+
+.advantages-item-full .advantages-title {
+  color: #ffffff;
 }
 
 .advantages-title::after {
@@ -526,18 +533,29 @@ body {
 .social {
   margin: 0;
   padding: 0;
+  width: 142px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 11px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
+  color: #83b3d3;
+}
+
+.social-link:hover,
+.social-link:focus {
+  color: #68a2ca;
+}
+
+.social-link:active {
+  opacity: 0.3;
 }
 
 .footer-telephone {
@@ -554,6 +572,22 @@ body {
 
 .footer-telephone:active {
   color: rgba(117, 97, 87, 0.3);
+}
+
+.htmlacademy {
+  display: block;
+  width: 115px;
+  height: 34px;
+  color: #000000;
+}
+
+.htmlacademy:hover,
+.htmlacademy:focus {
+  color: #756157;
+}
+
+.htmlacademy:active {
+  opacity: 0.3;
 }
 
 .filter {
@@ -908,7 +942,7 @@ body {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 340px);
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
   margin: 0;
   padding: 0 0 40px;
@@ -921,7 +955,7 @@ body {
   column-gap: 20px;
   row-gap: 16px;
   padding: 20px;
-  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 0 1px #e6e6e6;
   border-radius: 4px;
 }
 
