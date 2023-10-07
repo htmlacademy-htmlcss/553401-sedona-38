@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header container" data-test="header">
+      <header class="header" data-test="header">
         <a class="logo" href="index.html">
           <img src="img/svg/logo.svg" width="140" height="70" alt="Логотип">
         </a>
@@ -36,7 +36,7 @@
               </a>
             </li>
           </ul>
-          <a class="nav-btn button-dark button" href="#">Хочу сюда!</a>
+          <a class="nav-btn button" href="#">Хочу сюда!</a>
         </nav>
       </header>
 
@@ -74,7 +74,7 @@
               </ul>
             </fieldset>
             <fieldset class="filter-fieldset choise-of-housing-fieldset">
-              <legend>Тип Жилья:</legend>   <!--слово "Жилья" по макету с Большой буквы-->
+              <legend>Тип Жилья:</legend>
               <ul class="choise-of-housing-list control-list">
                 <li class="control-item">
                   <input class="control-input" type="radio" id="hotel" name="type-of-housing" value="hotel" checked>
@@ -123,10 +123,10 @@
           </form>
         </section>
 
-        <section class="results container" data-test="catalog">
+        <section class="results" data-test="catalog">
           <header class="results-sorting">
             <h2 class="results-title page-title">Найдено гостиниц: <span>38</span></h2>
-            <select class="sorting-control" name="sorting" aria-label="Сортировка">
+            <select class="results-select" name="sorting" aria-label="Сортировка">
               <option value="cheap" selected>Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
@@ -155,14 +155,16 @@
             <ul class="product-list">
               <li class="product">
                 <a class="product-img-link" href="#">
-                  <img src="img/hotel-1.jpg" width="300" height="212" alt="Amara Resort & Spa">
+                  <figure class="product-img">
+                    <img src="img/hotel-1.jpg" width="300" height="212" alt="Amara Resort & Spa">
+                  </figure>
                 </a>
                 <a class="product-title-link" href="#">
                   <h3 class="product-title">Amara Resort &amp; Spa</h3>
                 </a>
                 <p class="product-text product-type">Гостиница</p>
                 <p class="product-text product-price">От <span>4000 ₽</span></p>
-                <a class="product-more-button button button-dark" href="#">Подробнее</a>
+                <a class="product-more-button button" href="#">Подробнее</a>
                 <button class="product-favorites-btn button button-light">В избранное</button>
                 <p class="product-stars product-stars-4">
                   <span class="visually-hidden">Четырехзвездочный отель</span>
@@ -171,15 +173,17 @@
               </li>
               <li class="product">
                 <a class="product-img-link" href="#">
-                  <img src="img/hotel-2.jpg" width="300" height="212" alt="Villas at Poco Diablo">
+                  <figure class="product-img">
+                    <img src="img/hotel-2.jpg" width="300" height="212" alt="Villas at Poco Diablo">
+                  </figure>
                 </a>
                 <a class="product-title-link" href="#">
                   <h3 class="product-title">Villas at Poco Diablo</h3>
                 </a>
                 <p class="product-text product-type">Гостиница</p>
                 <p class="product-text product-price">От <span>5000 ₽</span></p>
-                <a class="product-more-button button button-dark" href="#">Подробнее</a>
-                <button class="product-favorites-btn button button-selected">В избранном</button>
+                <a class="product-more-button button" href="#">Подробнее</a>
+                <button class="product-favorites-btn product-favorites-btn-active button button-selected">В избранном</button>
                 <p class="product-stars product-stars-4">
                   <span class="visually-hidden">Четырехзвездочный отель</span>
                 </p>
@@ -187,14 +191,16 @@
               </li>
               <li class="product">
                 <a class="product-img-link" href="#">
-                  <img src="img/hotel-3.jpg" width="300" height="212" alt="Desert Quail Inn">
+                  <figure class="product-img">
+                    <img src="img/hotel-3.jpg" width="300" height="212" alt="Desert Quail Inn">
+                  </figure>
                 </a>
                 <a class="product-title-link" href="#">
                   <h3 class="product-title">Desert Quail Inn</h3>
                 </a>
                 <p class="product-text product-type">Гостиница</p>
                 <p class="product-text product-price">От <span>2500 ₽</span></p>
-                <a class="product-more-button button button-dark" href="#">Подробнее</a>
+                <a class="product-more-button button" href="#">Подробнее</a>
                 <button class="product-favorites-btn button button-light">В избранное</button>
                 <p class="product-stars product-stars-3">
                   <span class="visually-hidden">Трехзвездочный отель</span>
@@ -203,14 +209,16 @@
               </li>
               <li class="product">
                 <a class="product-img-link" href="#">
-                  <img src="img/hotel-4.jpg" width="300" height="212" alt="GreenTree Inn">
+                  <figure class="product-img">
+                    <img src="img/hotel-4.jpg" width="300" height="212" alt="GreenTree Inn">
+                  </figure>
                 </a>
                 <a class="product-title-link" href="#">
                   <h3 class="product-title">GreenTree Inn</h3>
                 </a>
                 <p class="product-text product-type">Гостиница</p>
                 <p class="product-text product-price">От <span>1500 ₽</span></p>
-                <a class="product-more-button button button-dark" href="#">Подробнее</a>
+                <a class="product-more-button button" href="#">Подробнее</a>
                 <button class="product-favorites-btn button button-light">В избранное</button>
                 <p class="product-stars product-stars-2">
                   <span class="visually-hidden">Двухзвездочный отель</span>
@@ -244,8 +252,10 @@
         </section>
 
         <section class="subscribe" data-test="subscribe">
-          <h2 class="subscribe-title page-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-text page-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <div class="subscribe-desc">
+            <h2 class="subscribe-title page-title">Подпишитесь на рассылку</h2>
+            <p class="subscribe-text page-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          </div>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="newsletter-email">Email</label>
             <input class="subscribe-input page-input" type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email" required>
@@ -254,7 +264,7 @@
         </section>
       </main>
 
-      <footer class="footer container" data-test="footer">
+      <footer class="footer" data-test="footer">
         <ul class="footer-social social">
           <li class="social-item">
             <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
