@@ -1181,12 +1181,13 @@ body {
 
 .modal-form {
   display: grid;
-  grid-template-columns: max-content 110px 1fr max-content 110px;
+  grid-template-columns: max-content 110px max-content 110px;
   row-gap: 48px;
   align-items: center;
 }
 
 .modal-input-wrapper {
+  width: 440px;
   grid-column: 2 / -1;
   position: relative;
   display: flex;
@@ -1233,7 +1234,8 @@ body {
 
 .modal-label-children {
   display: flex;
-  grid-column: 4 / 5;
+  justify-self: end;
+  grid-column: 3 / 4;
 }
 
 /* webkit для теста, в firefox не работает!!! */
