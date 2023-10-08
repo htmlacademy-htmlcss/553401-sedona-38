@@ -777,6 +777,16 @@ body {
   position: relative;
 }
 
+.range-input {
+  padding-right: 50px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .range-input-min {
   width: 143px;
   border-radius: 4px 0 0 4px;
@@ -873,12 +883,17 @@ body {
 
 .results-select {
   width: 292px;
-  padding: 14px 20px;
+  padding: 14px 53px 14px 20px;
   margin: 0 70px 0 auto;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
+  appearance: none;
+  background-image: url("../img/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 13px 7px;
 }
 
 .results-select:hover,
@@ -1087,4 +1102,208 @@ body {
 .pagination-link-more {
   color: #000000;
   background-color: transparent;
+}
+
+.modal-container {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  min-width: 717px;
+  min-height: 576px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  width: 53px;
+  height: 53px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  box-shadow: none;
+}
+
+.modal-close-button:active::before,
+.modal-close-button:active::after {
+  opacity: 0.3;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  margin-left: -9px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: rotate(-45deg);
+}
+
+.modal-title {
+  text-align: left;
+  padding-right: 30px;
+  margin-bottom: 64px;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: max-content 110px 1fr max-content 110px;
+  row-gap: 48px;
+  align-items: center;
+}
+
+.modal-input-wrapper {
+  grid-column: 2 / -1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-input-info::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 100%;
+  margin-top: 4px;
+  padding: 0 20px 0;
+  left: 0;
+  color: #333333;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.modal-input-info-arrival::after {
+  content: "Мы не можем отправить вас в прошлое.";
+  color: #ff5757;
+}
+
+.modal-input-info-departure::after {
+  content: "На эти даты есть свободные номера. Пока есть.";
+}
+
+.modal-label {
+  padding-right: 18px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal-label-adults,
+.modal-label-children {
+  padding-right: 46px;
+}
+
+.modal-label-children {
+  display: flex;
+  grid-column: 4 / 5;
+}
+
+/* webkit для теста, в firefox не работает!!! */
+
+/* .modal input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.modal input::-webkit-outer-spin-button,
+.modal input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+} */
+
+.modal-submit-button {
+  grid-column: 1 / -1;
+}
+
+.tooltip {
+  position: relative;
+  margin-top: -1px;
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip-text {
+  display: none;
+  width: 256px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  padding: 15px 18px 18px 22px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: #333333;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.tooltip-text::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  background-color: #333333;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
