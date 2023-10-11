@@ -177,28 +177,55 @@
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="modal-label modal-label-arrival" for="arrival-date">Дата Заезда:</label>
             <div class="modal-input-wrapper">
-              <input class="modal-input-arrival page-input" type="date" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020" required>
+              <input class="modal-input-arrival page-input" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" title="Введите дату в формате - 27 сентября 2020" required>
               <span class="modal-input-info modal-input-info-arrival"></span>
             </div>
             <label class="modal-label modal-label-departure" for="departure-date">Дата Выезда:</label>
             <div class="modal-input-wrapper">
-              <input class="modal-input-departure page-input" type="date" id="departure-date" name="departure-date" placeholder="1 сентября 2021" required>
+              <input class="modal-input-departure page-input" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2021" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" title="Введите дату в формате - 27 сентября 2020" required>
               <span class="modal-input-info modal-input-info-departure"></span>
             </div>
             <label class="modal-label modal-label-adults" for="adults">Взрослые:</label>
-            <input class="page-input" type="number" id="adults" name="adults" value="2">
-            <span class="modal-label modal-label-children">
-              <label for="children">Дети:</label>
+            <div class="modal-number-wrapper">
+              <button class="modal-btn-math modal-btn-minus" type="button" onclick="this.nextElementSibling.stepDown();">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9v2h14V9H3Z" fill="currentColor"/>
+                </svg>
+              </button>
+              <input class="modal-input-number page-input" type="number" id="adults" name="adults" value="2" step="1" min="1" max="99">
+              <button class="modal-btn-math modal-btn-plus" type="button" onclick="this.previousElementSibling.stepUp();">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
+            <label class="modal-label modal-label-children" for="children">
+              Дети:
               <span class="tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children">
-                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/>
+                  </svg>
                 </button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
                   Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
-              </span>
+              </label>
             </span>
-            <input class="page-input" type="number" id="children" name="children" value="2">
+            <div class="modal-number-wrapper">
+              <button class="modal-btn-math modal-btn-minus" type="button" onclick="this.nextElementSibling.stepDown();">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 9v2h14V9H3Z" fill="currentColor"/>
+                </svg>
+              </button>
+              <input class="modal-input-number page-input" type="number" id="children" name="children" value="2" step="1" min="0" max="99">
+              <button class="modal-btn-math modal-btn-plus" type="button" onclick="this.previousElementSibling.stepUp();">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="currentColor"/>
+                </svg>
+              </button>
+            </div>
             <button class="modal-submit-button button button-light" type="submit">Найти</button>
           </form>
         </section>

@@ -151,13 +151,12 @@ body {
 
 .page-input {
   width: 100%;
-  height: 48px;
   color: #000000;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   background-color: #f2f2f2;
   border: 2px solid transparent;
   border-radius: 4px;
@@ -475,6 +474,8 @@ body {
 
 .search-btn {
   padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .subscribe {
@@ -512,6 +513,12 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
+.subscribe-input::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
 .subscribe-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
@@ -521,6 +528,8 @@ body {
   padding: 8px 50px;
   border: none;
   border-radius: 0 4px 4px 0;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .footer {
@@ -783,8 +792,15 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
   margin: 0;
+}
+
+.range-input,
+.range-input:hover,
+.range-input:focus {
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .range-input-min {
@@ -1186,12 +1202,31 @@ body {
   align-items: center;
 }
 
+.modal-form input::placeholder {
+  color: #000000;
+}
+
+.modal-form input:-moz-placeholder,
+.modal-form input::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 .modal-input-wrapper {
   width: 440px;
   grid-column: 2 / -1;
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.modal-input-arrival,
+.modal-input-departure {
+  padding-right: 60px;
+  background-image: url("../img/svg/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px 20px;
 }
 
 .modal-input-info::after {
@@ -1238,17 +1273,72 @@ body {
   grid-column: 3 / 4;
 }
 
-/* webkit для теста, в firefox не работает!!! */
-
-/* .modal input::-webkit-calendar-picker-indicator {
-  display: none;
+.modal-number-wrapper {
+  position: relative;
 }
 
-.modal input::-webkit-outer-spin-button,
-.modal input::-webkit-inner-spin-button {
-  appearance: none;
+.modal-number-wrapper:hover .modal-input-number,
+.modal-number-wrapper:focus-within .modal-input-number {
+  background-color: #e6e6e6;
+}
+
+.modal-btn-math {
+  display: flex;
+  position: absolute;
+  top: 0;
+  border: none;
+  width: 40px;
+  height: 100%;
+  background-color: transparent;
+  color: rgba(117, 97, 87, 0.3);
+  outline: none;
+}
+
+.modal-btn-math:hover svg {
+  color: #000000;
+}
+
+.modal-btn-math:focus svg {
+  color: #000000;
+  box-shadow: 0 0 0 3px #82b3d3;
+  border-radius: 4px;
+}
+
+.modal-btn-math:active svg {
+  opacity: 0.2;
+  box-shadow: none;
+}
+
+.modal-btn-minus {
+  left: 0;
+}
+
+.modal-btn-plus {
+  right: 0;
+}
+
+.modal-input-number {
+  text-align: center;
+  line-height: 20px;
+  padding: 12px 40px;
+}
+
+.modal-input-number::-webkit-outer-spin-button,
+.modal-input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-} */
+}
+
+.modal-input-number,
+.modal-input-number:hover,
+.modal-input-number:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.modal-btn-math svg {
+  margin: auto;
+}
 
 .modal-submit-button {
   grid-column: 1 / -1;
