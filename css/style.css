@@ -1342,6 +1342,8 @@ body {
 
 .modal-submit-button {
   grid-column: 1 / -1;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .tooltip {
@@ -1358,6 +1360,7 @@ body {
   padding: 0;
   margin: 0;
   display: block;
+  cursor: pointer;
 }
 
 .tooltip-icon {
