@@ -99,22 +99,22 @@
           <ul class="service-list">
             <li class="service-item service-item-housing card-info">
               <h3 class="service-title blocks-title">Жильё</h3>
-              <p class="service-text blocks-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="service-text blocks-text">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
             </li>
             <li class="service-item service-item-food card-info">
               <h3 class="service-title blocks-title">Еда</h3>
-              <p class="service-text blocks-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p class="service-text blocks-text">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="service-item service-item-souvenirs card-info">
               <h3 class="service-title blocks-title">Сувениры</h3>
-              <p class="service-text blocks-text">Не только китайского, но и настоящего местного производства!</p>
+              <p class="service-text blocks-text">Не только китайского, <br>но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
 
         <section class="search" data-test="search">
           <h2 class="search-title page-title">Заинтересовались?</h2>
-          <p class="search-text page-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="search-text page-text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search-btn button" href="#">Поиск гостиницы в Седоне</a>
         </section>
 
@@ -182,7 +182,7 @@
             </div>
             <label class="modal-label modal-label-departure" for="departure-date">Дата Выезда:</label>
             <div class="modal-input-wrapper">
-              <input class="modal-input-departure page-input" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2021" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" title="Введите дату в формате - 27 сентября 2020" required>
+              <input class="modal-input-departure page-input" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2023" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" title="Введите дату в формате - 27 сентября 2020" required>
               <span class="modal-input-info modal-input-info-departure"></span>
             </div>
             <label class="modal-label modal-label-adults" for="adults">Взрослые:</label>
@@ -209,10 +209,11 @@
                   </svg>
                 </button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-children">
-                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                 </span>
-              </label>
-            </span>
+              </span>
+            </label>
+
             <div class="modal-number-wrapper">
               <button class="modal-btn-math modal-btn-minus" type="button" onclick="this.nextElementSibling.stepDown();">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,5 +232,6 @@
         </section>
       </div>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
