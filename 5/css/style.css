@@ -151,7 +151,6 @@ body {
 
 .page-input {
   width: 100%;
-  height: 48px;
   color: #000000;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -159,8 +158,18 @@ body {
   line-height: 24px;
   padding: 12px 20px;
   background-color: #f2f2f2;
-  border: 2px solid transparent;
+  border: none;
   border-radius: 4px;
+}
+
+.page-input::placeholder {
+  color: #000000;
+}
+
+.page-input:-moz-placeholder,
+.page-input::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
 }
 
 .page-input:hover {
@@ -198,7 +207,7 @@ body {
 
 .main-nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .nav-list {
@@ -276,16 +285,18 @@ body {
 }
 
 .user-link-favorites-num {
+  min-width: 20px;
   position: absolute;
-  bottom: 50%;
-  left: 50%;
+  top: 11px;
+  left: 20px;
   display: block;
-  padding: 5px;
+  padding: 5px 4px;
   background-color: #7db54f;
-  border-radius: 50%;
+  border-radius: 10px;
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
+  text-align: center;
 }
 
 .nav-btn {
@@ -294,9 +305,10 @@ body {
 
 .hero {
   position: relative;
-  padding: 50px 70px 80px;
+  padding: 51px 70px 82px;
   background-color: rgba(131, 179, 211, 0.5);
   background-image: url("../img/index-background.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -321,7 +333,7 @@ body {
 .advantages-desc {
   width: 860px;
   margin: 0 auto;
-  padding: 70px 0 90px;
+  padding: 69px 0 90px;
 }
 
 .advantages-block-title {
@@ -410,7 +422,13 @@ body {
 .advantages-img {
   margin: 0;
   width: 800px;
-  height: 385px;
+}
+
+.advantages-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .service-desc {
@@ -475,6 +493,8 @@ body {
 
 .search-btn {
   padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .subscribe {
@@ -486,12 +506,14 @@ body {
   background-color: #3b6784;
   background-image: url("../img/subscribe-background.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .subscribe-desc {
   width: 475px;
   margin: 0 auto;
-  padding-bottom: 54px;
+  padding-bottom: 55px;
 }
 
 .subscribe-index .subscribe-title {
@@ -512,6 +534,19 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
+.subscribe-input::placeholder {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.subscribe-input:-moz-placeholder,
+.subscribe-input::-moz-placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
 .subscribe-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
@@ -521,13 +556,15 @@ body {
   padding: 8px 50px;
   border: none;
   border-radius: 0 4px 4px 0;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 70px 30px;
+  padding: 45px 70px 35px;
 }
 
 .social {
@@ -537,7 +574,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 11px;
+  justify-content: space-around;
 }
 
 .social-link {
@@ -596,10 +633,12 @@ body {
   background-color: #87655b;
   background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .filter-title {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
   font-size: 60px;
   line-height: 78px;
 }
@@ -607,8 +646,8 @@ body {
 .breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 22px;
+  align-items: center;
+  gap: 28px;
   margin: 0 0 40px;
   padding: 0;
   list-style: none;
@@ -621,10 +660,10 @@ body {
 .breadcrumbs-list li:not(:last-child)::after {
   position: absolute;
   content: "";
-  bottom: 2px;
-  right: -13px;
-  width: 6px;
-  height: 6px;
+  bottom: 4px;
+  right: -15px;
+  width: 7px;
+  height: 7px;
   border-radius: 1px;
   box-shadow: inset -1px -1px 0 0 #ffffff;
   transform: rotate(-45deg);
@@ -653,10 +692,10 @@ body {
 
 .breadcrumbs-link-home {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 15px;
   background-image: url("../img/svg/home.svg");
-  background-size: 12px 12px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -676,6 +715,7 @@ body {
 }
 
 .filter-fieldset legend {
+  padding: 0;
   margin-bottom: 32px;
   font-size: 20px;
   line-height: 24px;
@@ -691,6 +731,7 @@ body {
 .control-item {
   display: grid;
   grid-template-columns: 20px auto;
+  align-items: center;
   gap: 16px;
   margin-bottom: 16px;
 }
@@ -730,7 +771,7 @@ body {
   opacity: 0.3;
 }
 
-/* Чекбоксы и радиокнопки делал по примеру статьи, ссылка на которую есть на Вашем сайте. Если над, то переделаю */
+/* Чекбоксы и радиокнопки делал по примеру статьи, ссылка на которую есть на Вашем сайте. Если надо, то переделаю другим вариантом */
 
 .control-input[type="radio"] {
   border-radius: 50%;
@@ -770,7 +811,7 @@ body {
 .range-input-container {
   display: flex;
   column-gap: 2px;
-  margin-bottom: 36px;
+  margin-bottom: 44px;
 }
 
 .range-item {
@@ -783,8 +824,15 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
   margin: 0;
+}
+
+.range-input,
+.range-input:hover,
+.range-input:focus {
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .range-input-min {
@@ -885,11 +933,14 @@ body {
   width: 292px;
   padding: 14px 53px 14px 20px;
   margin: 0 70px 0 auto;
-  border: 2px solid #e5e5e5;
+  border: none;
+  box-shadow: inset 0 0 0 2px #e5e5e5;
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   appearance: none;
+  background-color: #ffffff;
   background-image: url("../img/svg/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
@@ -898,17 +949,18 @@ body {
 
 .results-select:hover,
 .results-select:focus {
+  box-shadow: inset 0 0 0 2px #68a2ca;
   outline: none;
-  border-color: #68a2ca;
 }
 
 .results-select:disabled {
-  border-color: #000000;
+  box-shadow: inset 0 0 0 2px #000000;
   opacity: 0.3;
 }
 
 .sorting-view-list {
   display: flex;
+  align-self: flex-start;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -1025,6 +1077,7 @@ body {
 }
 
 .product-stars {
+  display: block;
   height: 37px;
   background-image: url("../img/svg/stars.svg");
   background-repeat: no-repeat;
@@ -1044,17 +1097,18 @@ body {
 }
 
 .product-rating {
+  display: block;
   background-color: #f2f2f2;
   border-radius: 4px;
   text-align: center;
-  padding: 8px;
+  padding: 9px 8px 8px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
 .pagination {
-  border-top: 1px solid #e6e6e6;
+  box-shadow: inset 0 1px 0 0 #e6e6e6;
   padding: 40px 0 60px;
 }
 
@@ -1081,6 +1135,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   background-color: #82b3d3;
+  border: 1px solid #82b3d3;
   border-radius: 4px;
 }
 
@@ -1097,22 +1152,30 @@ body {
 .pagination-link-current {
   color: #000000;
   background-color: #f2f2f2;
+  border-color: transparent;
+  pointer-events: none;
 }
 
 .pagination-link-more {
+  font-weight: 400;
   color: #000000;
   background-color: transparent;
+  border-color: transparent;
 }
 
 .modal-container {
   z-index: 1;
   position: fixed;
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-opened {
+  display: flex;
 }
 
 .modal {
@@ -1181,16 +1244,26 @@ body {
 
 .modal-form {
   display: grid;
-  grid-template-columns: max-content 110px 1fr max-content 110px;
+  grid-template-columns: max-content 110px max-content 110px;
   row-gap: 48px;
   align-items: center;
 }
 
 .modal-input-wrapper {
+  width: 440px;
   grid-column: 2 / -1;
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.modal-input-arrival,
+.modal-input-departure {
+  padding-right: 60px;
+  background-image: url("../img/svg/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 20px 20px;
 }
 
 .modal-input-info::after {
@@ -1233,29 +1306,89 @@ body {
 
 .modal-label-children {
   display: flex;
-  grid-column: 4 / 5;
+  justify-self: end;
+  grid-column: 3 / 4;
 }
 
-/* webkit для теста, в firefox не работает!!! */
-
-/* .modal input::-webkit-calendar-picker-indicator {
-  display: none;
+.modal-number-wrapper {
+  position: relative;
 }
 
-.modal input::-webkit-outer-spin-button,
-.modal input::-webkit-inner-spin-button {
-  appearance: none;
+.modal-number-wrapper:hover .modal-input-number,
+.modal-number-wrapper:focus-within .modal-input-number {
+  background-color: #e6e6e6;
+}
+
+.modal-btn-math {
+  display: flex;
+  position: absolute;
+  top: 0;
+  border: none;
+  width: 40px;
+  height: 100%;
+  background-color: transparent;
+  color: rgba(117, 97, 87, 0.3);
+  outline: none;
+}
+
+.modal-btn-math:hover svg {
+  color: #000000;
+}
+
+.modal-btn-math:focus svg {
+  color: #000000;
+  box-shadow: 0 0 0 3px #82b3d3;
+  border-radius: 4px;
+}
+
+.modal-btn-math:active svg {
+  opacity: 0.2;
+  box-shadow: none;
+}
+
+.modal-btn-minus {
+  left: 0;
+}
+
+.modal-btn-plus {
+  right: 0;
+}
+
+.modal-input-number {
+  text-align: center;
+  line-height: 20px;
+  padding: 14px 40px;
+}
+
+.modal-input-number::-webkit-outer-spin-button,
+.modal-input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-} */
+}
+
+.modal-input-number,
+.modal-input-number:hover,
+.modal-input-number:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.modal-btn-math svg {
+  margin: auto;
+}
 
 .modal-submit-button {
   grid-column: 1 / -1;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 18px;
+  border-radius: 10px;
 }
 
 .tooltip {
   position: relative;
-  margin-top: -1px;
-  margin-left: 10px;
+  margin-top: -2px;
+  margin-left: 12px;
   width: 26px;
   height: 26px;
 }
@@ -1266,6 +1399,7 @@ body {
   padding: 0;
   margin: 0;
   display: block;
+  cursor: pointer;
 }
 
 .tooltip-icon {
@@ -1280,7 +1414,7 @@ body {
   position: absolute;
   top: 100%;
   margin-top: 15px;
-  padding: 15px 18px 18px 22px;
+  padding: 21px 18px 23px 22px;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
