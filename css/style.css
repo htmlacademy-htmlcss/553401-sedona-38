@@ -1318,6 +1318,10 @@ body {
   grid-column: 3 / 4;
 }
 
+.modal-label-children .modal-label {
+  padding-right: 0;
+}
+
 .modal-number-wrapper {
   position: relative;
 }
