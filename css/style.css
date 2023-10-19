@@ -96,7 +96,6 @@ body {
 }
 
 .button-light:active {
-  background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -118,14 +117,12 @@ body {
 
 .button-transparent:active {
   box-shadow: none;
-  color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
 .button:disabled,
 .button-disabled {
   background-color: #e5e5e5;
-  color: #ffffff;
 }
 
 .button-transparent:disabled {
@@ -159,26 +156,24 @@ body {
   padding: 12px 20px;
   background-color: #f2f2f2;
   border: none;
+  /* border: 2px solid transparent; */
   border-radius: 4px;
 }
 
 .page-input::placeholder {
   color: #000000;
-}
-
-.page-input:-moz-placeholder,
-.page-input::-moz-placeholder {
-  color: #000000;
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .page-input:hover {
+  /* border-color: #e6e6e6; */
   background-color: #e6e6e6;
 }
 
 .page-input:focus {
   outline: none;
   box-shadow: 0 0 0 3px #83b3d3;
+  /* border-color: #e6e6e6; */
   background-color: #e6e6e6;
 }
 
@@ -191,7 +186,7 @@ body {
   grid-template-columns: 138px 1fr;
   position: relative;
   z-index: 1;
-  padding: 0 70px 0;
+  padding: 0 70px;
 }
 
 .logo {
@@ -204,11 +199,11 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
@@ -252,8 +247,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-self: flex-start;
-  margin: 0;
-  margin-right: 20px;
+  margin: 0 20px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -261,7 +255,6 @@ body {
 .user-link {
   position: relative;
   display: block;
-  padding: 20px 16px;
   min-width: 44px;
   min-height: 64px;
   background-size: 20px 20px;
@@ -355,13 +348,16 @@ body {
   background-color: rgba(130, 179, 211, 0.2);
 }
 
-.advantages-item:nth-child(2n) {
+.advantages-item:not(.advantages-item-full):nth-child(2n) {
   background-color: rgba(130, 179, 211, 0.12);
 }
 
 .advantages-item-full {
   display: flex;
+  flex-wrap: wrap;
   grid-column: 1 / -1;
+  background-color: rgba(130, 179, 211, 1);
+  color: #ffffff;
 }
 
 .advantages-item-reverse {
@@ -369,31 +365,26 @@ body {
 }
 
 .card-info {
+  max-width: 400px;
   min-height: 385px;
-  padding: 80px 85px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 115px 85px 80px;
+  text-align: center;
 }
 
 .advantages-item-full .advantages-content {
-  background-color: rgba(130, 179, 211, 1);
-  color: #ffffff;
+  padding-top: 103px;
 }
 
-.blocks-title {
+.card-title {
   color: #000000;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  text-align: center;
 }
 
-.blocks-text {
+.card-text {
   margin: 0;
-  text-align: center;
 }
 
 .advantages-title {
@@ -452,11 +443,8 @@ body {
   list-style: none;
 }
 
-.service-title {
-  padding-top: 102px;
-}
-
 .service-item {
+  padding-top: 184px;
   background-size: 75px 72px;
   background-position: center 80px;
   background-repeat: no-repeat;
@@ -539,16 +527,7 @@ body {
 }
 
 .subscribe-input::placeholder {
-  font-size: 18px;
-  line-height: 24px;
   font-weight: 400;
-  opacity: 0.6;
-}
-
-.subscribe-input:-moz-placeholder,
-.subscribe-input::-moz-placeholder {
-  color: #000000;
-  opacity: 0.6;
 }
 
 .subscribe-btn {
@@ -559,6 +538,7 @@ body {
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   padding: 45px 70px 35px;
@@ -566,19 +546,18 @@ body {
 
 .social {
   margin: 0;
-  padding: 0 4px 0;
-  width: 142px;
+  padding: 0;
+  max-width: 150px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 48px;
   height: 40px;
   color: #83b3d3;
 }
@@ -665,11 +644,6 @@ body {
   border-radius: 1px;
   box-shadow: inset -1px -1px 0 0 #ffffff;
   transform: rotate(-45deg);
-
-  /* Если не устроит вид стрелки, то вот SVG */
-  /* background-image: url("../img/svg/next-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 
 .breadcrumbs-link {
@@ -731,7 +705,6 @@ body {
   display: grid;
   grid-template-columns: 20px auto;
   align-items: center;
-  gap: 16px;
   margin-bottom: 16px;
 }
 
@@ -770,8 +743,6 @@ body {
   opacity: 0.3;
 }
 
-/* Чекбоксы и радиокнопки делал по примеру статьи, ссылка на которую есть на Вашем сайте. Если надо, то переделаю другим вариантом */
-
 .control-input[type="radio"] {
   border-radius: 50%;
 }
@@ -799,6 +770,7 @@ body {
 }
 
 .control-label {
+  padding-left: 16px;
   font-size: 18px;
   line-height: 23px;
 }
@@ -915,11 +887,12 @@ body {
 }
 
 .results {
-  padding: 0 70px 0;
+  padding: 0 70px;
 }
 
 .results-sorting {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 50px 0 40px;
 }
@@ -959,8 +932,10 @@ body {
 
 .sorting-view-list {
   display: flex;
+  flex-wrap: wrap;
   align-self: flex-start;
   gap: 8px;
+  max-width: 160px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1008,51 +983,32 @@ body {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, 340px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin: 0;
   padding: 0 0 40px;
   list-style: none;
 }
 
-.product-list.product-list-preview,
-.product-list.product-list-table {
+.product-list[data-view="view-preview"],
+.product-list[data-view="view-table"] {
   grid-template-columns: 1fr;
-}
-
-.product-list.product-list-table .product {
-  align-items: start;
-  grid-template:
-    "img title title price more"
-    "img type stars rating favorites" auto / 1fr 1fr 1fr 1fr 1fr;
-}
-
-.product-list.product-list-table .product-type,
-.product-list.product-list-table .product-price {
-  margin-top: 10px;
-}
-
-.product-list.product-list-table .product-stars {
-  justify-self: end;
 }
 
 .product {
   display: grid;
-  grid-template:
-    "img img"
-    "title title" 1fr
-    "type price"
-    "more favorites"
-    "stars rating" auto / 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  /* Следующий параметр, чтобы растянуть заголовок карточки на одинаковую высоту при длинном названии в одной из них */
+  grid-template-rows: auto 1fr auto;
+  gap: 16px 20px;
+  align-content: start;
   padding: 20px;
-  box-shadow: 0 0 0 1px #e6e6e6;
   border-radius: 4px;
+  box-shadow: 0 0 0 1px #e6e6e6;
 }
 
 .product-img-link {
-  grid-area: img;
+  grid-column: 1 / -1;
 }
 
 .product-img {
@@ -1067,8 +1023,8 @@ body {
 }
 
 .product-title-link {
+  grid-column: 1 / -1;
   justify-self: start;
-  grid-area: title;
   text-decoration: none;
   color: #000000;
 }
@@ -1083,21 +1039,8 @@ body {
   margin: 0;
 }
 
-.product-type {
-  grid-area: type;
-}
-
 .product-price {
-  grid-area: price;
   text-align: end;
-}
-
-.product-more-button {
-  grid-area: more;
-}
-
-.product-favorites-btn {
-  grid-area: favorites;
 }
 
 .product-favorites-btn-active {
@@ -1115,7 +1058,6 @@ body {
 }
 
 .product-stars {
-  grid-area: stars;
   display: block;
   height: 37px;
   background-image: url("../img/svg/stars.svg");
@@ -1136,7 +1078,6 @@ body {
 }
 
 .product-rating {
-  grid-area: rating;
   display: block;
   background-color: #f2f2f2;
   border-radius: 4px;
@@ -1146,6 +1087,31 @@ body {
   line-height: 20px;
   text-transform: uppercase;
 }
+
+.product-list[data-view="view-table"] .product {
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px 30px;
+  align-items: center;
+}
+
+.product-list[data-view="view-table"] .product-title-link {
+  grid-column: 2 / -1;
+}
+
+.product-list[data-view="view-table"] .product-img-link {
+  grid-column: auto;
+  grid-row: 1 / 3;
+}
+
+.product-list[data-view="view-table"] .product-more-button {
+  order: 3;
+}
+
+.product-list[data-view="view-table"] .product-favorites-btn {
+  order: 4;
+}
+
 
 .pagination {
   box-shadow: inset 0 1px 0 0 #e6e6e6;
@@ -1223,13 +1189,14 @@ body {
   margin: auto;
   padding: 64px 70px;
   min-width: 717px;
-  min-height: 576px;
   border-radius: 30px;
   background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 .modal-close-button {
   position: absolute;
+  padding: 0;
   top: 64px;
   right: 52px;
   width: 53px;
@@ -1251,6 +1218,7 @@ body {
 }
 
 .modal-close-button:active {
+  background-color: #e6e6e6;
   box-shadow: none;
 }
 
@@ -1267,13 +1235,15 @@ body {
   left: 50%;
   width: 18px;
   height: 2px;
-  margin-left: -9px;
   background-color: #000000;
-  transform: rotate(45deg);
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .modal-close-button::after {
-  transform: rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .modal-title {
@@ -1306,29 +1276,27 @@ body {
   background-size: 20px 20px;
 }
 
-.modal-input-info::after {
+.modal-input-info {
+  display: none;
   position: absolute;
   z-index: 1;
-  content: "";
   top: 100%;
   margin-top: 4px;
   padding: 0 20px 0;
   left: 0;
-  color: #333333;
   font-size: 16px;
   line-height: 21px;
-  font-weight: 400;
   background-color: #ffffff;
   border-radius: 4px;
 }
 
-.modal-input-info-arrival::after {
-  content: "Мы не можем отправить вас в прошлое.";
+.modal-input-info-invalide {
+  display: block;
   color: #ff5757;
 }
 
-.modal-input-info-departure::after {
-  content: "На эти даты есть свободные номера. Пока есть.";
+.modal-input-info-valide {
+  display: block;
 }
 
 .modal-label {

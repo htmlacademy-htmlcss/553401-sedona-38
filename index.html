@@ -55,8 +55,8 @@
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-full">
               <div class="advantages-content card-info">
-                <h3 class="advantages-title blocks-title">Настоящий городок</h3>
-                <p class="advantages-text blocks-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                <h3 class="advantages-title card-title">Настоящий городок</h3>
+                <p class="advantages-text card-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <figure class="advantages-img">
                 <img src="img/advantages-photo-1.jpg" width="800" height="385" alt="Фото городка Седона">
@@ -64,26 +64,26 @@
             </li>
             <li class="advantages-item">
               <div class="advantages-content card-info">
-                <h3 class="advantages-title blocks-title">Небольшая площадь</h3>
-                <p class="advantages-text blocks-text">Все достопримечательности находятся очень близко</p>
+                <h3 class="advantages-title card-title">Небольшая площадь</h3>
+                <p class="advantages-text card-text">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-content card-info">
-                <h3 class="advantages-title blocks-title">Красивая дорога</h3>
-                <p class="advantages-text blocks-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <h3 class="advantages-title card-title">Красивая дорога</h3>
+                <p class="advantages-text card-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-content card-info">
-                <h3 class="advantages-title blocks-title">Мало туристов</h3>
-                <p class="advantages-text blocks-text">Большинство едет в Гранд Каньон и толпится там</p>
+                <h3 class="advantages-title card-title">Мало туристов</h3>
+                <p class="advantages-text card-text">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
             <li class="advantages-item advantages-item-full advantages-item-reverse">
               <div class="advantages-content card-info">
-                <h3 class="advantages-title blocks-title">Там есть <br>мост дьявола</h3>
-                <p class="advantages-text blocks-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                <h3 class="advantages-title card-title">Там есть <br>мост дьявола</h3>
+                <p class="advantages-text card-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <figure class="advantages-img">
                 <img src="img/advantages-photo-2.jpg" width="800" height="385" alt="Фото каньона Седона">
@@ -99,16 +99,16 @@
           </div>
           <ul class="service-list">
             <li class="service-item service-item-housing card-info">
-              <h3 class="service-title blocks-title">Жильё</h3>
-              <p class="service-text blocks-text">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
+              <h3 class="service-title card-title">Жильё</h3>
+              <p class="service-text card-text">Рекомендуем пожить <br>в настоящем мотеле, <br>всё как в кино!</p>
             </li>
             <li class="service-item service-item-food card-info">
-              <h3 class="service-title blocks-title">Еда</h3>
-              <p class="service-text blocks-text">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
+              <h3 class="service-title card-title">Еда</h3>
+              <p class="service-text card-text">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="service-item service-item-souvenirs card-info">
-              <h3 class="service-title blocks-title">Сувениры</h3>
-              <p class="service-text blocks-text">Не только китайского, <br>но и настоящего местного производства!</p>
+              <h3 class="service-title card-title">Сувениры</h3>
+              <p class="service-text card-text">Не только китайского, <br>но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
@@ -179,22 +179,22 @@
             <label class="modal-label modal-label-arrival" for="arrival-date">Дата Заезда:</label>
             <div class="modal-input-wrapper">
               <input class="modal-input-arrival page-input" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" title="Введите дату в формате - 27 сентября 2020" required>
-              <span class="modal-input-info modal-input-info-arrival"></span>
+              <span class="modal-input-info modal-input-info-invalide">Мы не можем отправить вас в прошлое.</span>
             </div>
             <label class="modal-label modal-label-departure" for="departure-date">Дата Выезда:</label>
             <div class="modal-input-wrapper">
               <input class="modal-input-departure page-input" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2023" pattern="[0-9]{1,2}\s[А-Яа-я]{3,8}\s[0-9]{4}" title="Введите дату в формате - 27 сентября 2020" required>
-              <span class="modal-input-info modal-input-info-departure"></span>
+              <span class="modal-input-info modal-input-info-valide">На эти даты есть свободные номера. Пока есть.</span>
             </div>
             <label class="modal-label modal-label-adults" for="adults">Взрослые:</label>
             <div class="modal-number-wrapper">
-              <button class="modal-btn-math modal-btn-minus" type="button" onclick="this.nextElementSibling.stepDown();">
+              <button class="modal-btn-math modal-btn-minus" type="button">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 9v2h14V9H3Z" fill="currentColor"/>
                 </svg>
               </button>
               <input class="modal-input-number page-input" type="number" id="adults" name="adults" value="2" step="1" min="1" max="99">
-              <button class="modal-btn-math modal-btn-plus" type="button" onclick="this.previousElementSibling.stepUp();">
+              <button class="modal-btn-math modal-btn-plus" type="button">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="currentColor"/>
                 </svg>
@@ -216,13 +216,13 @@
             </label>
 
             <div class="modal-number-wrapper">
-              <button class="modal-btn-math modal-btn-minus" type="button" onclick="this.nextElementSibling.stepDown();">
+              <button class="modal-btn-math modal-btn-minus" type="button">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 9v2h14V9H3Z" fill="currentColor"/>
                 </svg>
               </button>
               <input class="modal-input-number page-input" type="number" id="children" name="children" value="2" step="1" min="0" max="99">
-              <button class="modal-btn-math modal-btn-plus" type="button" onclick="this.previousElementSibling.stepUp();">
+              <button class="modal-btn-math modal-btn-plus" type="button">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="currentColor"/>
                 </svg>
@@ -234,5 +234,6 @@
       </div>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/step.js"></script>
   </body>
 </html>
