@@ -283,7 +283,7 @@ body {
   min-width: 20px;
   position: absolute;
   top: 11px;
-  left: 20px;
+  right: 4px;
   display: block;
   padding: 5px 4px;
   background-color: #7db54f;
