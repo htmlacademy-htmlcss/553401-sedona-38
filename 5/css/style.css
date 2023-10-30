@@ -190,9 +190,19 @@ body {
   display: block;
   width: 140px;
   margin-bottom: -6px;
+  color: #81b3d3;
 }
 
-.logo img {
+.logo:hover,
+.logo:focus {
+  color: #68a2ca;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
+.logo svg {
   display: block;
   width: 100%;
   height: auto;
@@ -225,7 +235,7 @@ body {
 
 .nav-list-link:hover,
 .nav-list-link:focus {
-  opacity: 0.6;
+  color: #756157;
 }
 
 .nav-list-link:active {
@@ -351,8 +361,6 @@ body {
 
 .advantages-item-full {
   display: flex;
-  /* С wrap при уменьшении ширины родителя картинка переносится на следующий ряд, что плохо смотрится */
-  /* flex-wrap: wrap; */
   grid-column: 1 / -1;
   background-color: #82b3d3;
   color: #ffffff;
@@ -1013,6 +1021,17 @@ body {
   grid-column: 1 / -1;
 }
 
+.product-img-link:hover,
+.product-img-link:focus {
+  opacity: 0.6;
+}
+
+.product-img-link:active,
+.product-title-link:active {
+  opacity: 0.3;
+}
+
+
 .product-img {
   margin: 0;
 }
@@ -1029,6 +1048,11 @@ body {
   justify-self: start;
   text-decoration: none;
   color: #000000;
+}
+
+.product-title-link:hover,
+.product-title-link:focus {
+  color: #756157;
 }
 
 .product-title {
@@ -1169,6 +1193,16 @@ body {
   color: #000000;
   background-color: transparent;
   border-color: transparent;
+}
+
+.pagination-link-more:hover,
+.pagination-link-more:focus {
+  background-color: #f2f2f2;
+}
+
+.pagination-link-more:active {
+  background-color: #f2f2f2;
+  opacity: 0.6;
 }
 
 .modal-container {
