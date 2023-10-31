@@ -11,7 +11,7 @@
   <body>
     <div class="wrapper">
       <header class="header" data-test="header">
-        <a class="logo" href="index.html" aria-current="page">
+        <a class="logo" href="index.html" aria-current="page" aria-label="Логотип.">
           <svg width="140" height="70" viewBox="0 0 140 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#a)">
               <path d="M140 0H0l60.362 65.7c5.276 5.8 14 5.8 19.276 0L140 0Z" fill="currentColor"/>
@@ -72,9 +72,9 @@
                 <h3 class="advantages-title card-title">Настоящий городок</h3>
                 <p class="advantages-text card-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <figure class="advantages-img">
+              <div class="advantages-img">
                 <img src="img/advantages-photo-1.jpg" width="800" height="385" alt="Фото городка Седона на фоне гор.">
-              </figure>
+              </div>
             </li>
             <li class="advantages-item">
               <div class="advantages-content card-info">
@@ -99,9 +99,9 @@
                 <h3 class="advantages-title card-title">Там есть <br>мост дьявола</h3>
                 <p class="advantages-text card-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
-              <figure class="advantages-img">
+              <div class="advantages-img">
                 <img src="img/advantages-photo-2.jpg" width="800" height="385" alt="Фото большого каньона Седона.">
-              </figure>
+              </div>
             </li>
           </ul>
         </section>
@@ -202,11 +202,11 @@
             </div>
             <label class="modal-label modal-label-adults" for="adults">Взрослые:</label>
             <div class="modal-number-wrapper">
-              <button class="modal-btn-math modal-btn-minus" type="button">
+              <button class="modal-btn-math modal-btn-minus" type="button" aria-label="Уменьшить количество.">
                 <span class="sign sign-minus"></span>
               </button>
               <input class="modal-input-number page-input" type="number" id="adults" name="adults" value="2" step="1" min="1" max="99">
-              <button class="modal-btn-math modal-btn-plus" type="button">
+              <button class="modal-btn-math modal-btn-plus" type="button" aria-label="Увеличить количество.">
                 <span class="sign sign-plus"></span>
               </button>
             </div>
@@ -226,11 +226,11 @@
             </div>
 
             <div class="modal-number-wrapper">
-              <button class="modal-btn-math modal-btn-minus" type="button">
+              <button class="modal-btn-math modal-btn-minus" type="button" aria-label="Уменьшить количество.">
                 <span class="sign sign-minus"></span>
               </button>
               <input class="modal-input-number page-input" type="number" id="children" name="children" value="2" step="1" min="0" max="99">
-              <button class="modal-btn-math modal-btn-plus" type="button">
+              <button class="modal-btn-math modal-btn-plus" type="button" aria-label="Увеличить количество.">
                 <span class="sign sign-plus"></span>
               </button>
             </div>
