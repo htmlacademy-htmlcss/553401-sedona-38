@@ -328,6 +328,7 @@ body {
   position: absolute;
   bottom: 0;
   background-image: url("../img/svg/border-bottom-background.svg");
+  background-position: center;
   left: 0;
   right: 0;
   height: 57px;
@@ -420,11 +421,6 @@ body {
 
 .advantages-item-full .advantages-title::after {
   background-color: rgba(255, 255, 255, 0.3);
-}
-
-.advantages-img {
-  margin: 0;
-  width: 800px;
 }
 
 .advantages-img img {
@@ -528,7 +524,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 232px;
   margin: 0 auto;
-  width: 684px;
+  max-width: 684px;
 }
 
 .subscribe-input {
@@ -646,13 +642,13 @@ body {
 .breadcrumbs-list li:not(:last-child)::after {
   position: absolute;
   content: "";
-  bottom: 4px;
+  top: 50%;
   right: -15px;
   width: 7px;
   height: 7px;
   border-radius: 1px;
   box-shadow: inset -1px -1px 0 0 #ffffff;
-  transform: rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .breadcrumbs-link {
@@ -674,10 +670,11 @@ body {
 .breadcrumbs-link-home {
   display: block;
   width: 13px;
-  height: 15px;
+  height: 21px;
   background-image: url("../img/svg/home.svg");
-  background-size: cover;
+  background-size: 13px 15px;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .filter-form {
@@ -695,10 +692,6 @@ body {
 .infrastructure-fieldset,
 .choice-of-housing-fieldset {
   max-width: 17%;
-}
-
-.filter-fieldset:last-child {
-  margin-right: 0;
 }
 
 .filter-fieldset legend {
@@ -881,14 +874,14 @@ body {
   right: 0;
 }
 
-.buttons-fieldset {
+.filter-buttons {
   display: flex;
   flex-direction: column;
   padding-top: 56px;
   width: 191px;
 }
 
-.buttons-fieldset button {
+.filter-buttons button {
   padding: 8px 8px;
 }
 
@@ -1031,12 +1024,7 @@ body {
   opacity: 0.3;
 }
 
-
-.product-img {
-  margin: 0;
-}
-
-.product-img img {
+.product-img-link img {
   display: block;
   width: 100%;
   height: auto;
